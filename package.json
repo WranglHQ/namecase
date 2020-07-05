@@ -23,7 +23,10 @@
   "main": "namecase",
   "readmeFilename": "README.md",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha test"
+    "test": "./node_modules/mocha/bin/mocha test",
+    "browserifyBIN_WHAT": "browserify bin/namecase --s NameCase | uglifyjs >  browserified/min.js; browserify bin/namecase  --standalone NameCase > browserified/index.js; ",
+    "browserify": "browserify namecase.js --s NameCase | uglifyjs >  browserified/index.js;",
+    "notes": "https://stackoverflow.com/questions/23296094/browserify-how-to-call-function-bundled-in-a-file-generated-through-browserify"
   },
   "bin": "./bin/namecase",
   "bugs": "https://github.com/emgee3/namecase/issues"
